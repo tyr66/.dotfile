@@ -1,0 +1,71 @@
+// https://github.com/neoclide/coc.nvim/wiki/Language-servers
+// https://github.com/neoclide/coc.nvim/blob/master/data/schema.json
+
+{
+    // 浮动窗口配置
+    "hover.floatConfig": { "border": true, "rounded": true, "focusable": true },
+    "suggest.floatConfig": { "border": true, "rounded": true },
+    "diagnostic.floatConfig": { "border": true, "rounded": true },
+    "signature.floatConfig": { "border": true, "rounded": true },
+    "list.autoPreview": true,
+    "list.alignColumns": true,
+    "list.floatPreview": true,
+    "outline.autoPreview": true,
+    "git.floatConfig": { "border": true, "rounded": true },
+    "suggest.noselect": true, // 补全时选择第一项，否则按下tab后会跳到第二项
+
+    "languageserver": {
+
+    },
+    // 移除重复的补全项 https://github.com/neoclide/coc.nvim/issues/1698
+    "suggest.removeDuplicateItems": true,
+
+    // 开启codeLen 功能 https://www.codeproject.com/Articles/794766/What-is-CodeLens
+    "codeLens.enable": true,
+
+    "signature.enable": true,
+
+    "coc.preferences.colorSupport": true,
+
+    "highlight.colors.enable":true,
+
+
+    "diagnostic.enableHighlightLineNumber": true,
+
+    "clangd.path": "D:\\.dotfile\\coc\\extensions\\coc-clangd-data\\install\\15.0.6\\clangd_15.0.6\\bin\\clangd.exe",
+
+    // sumneko-lua
+    "sumneko-lua.enableNvimLuaDev": true,
+
+    // clangd
+    "clangd.arguments":[
+
+        "--clang-tidy", // 开启clangd-tidy https://clang.llvm.org/extra/clang-tidy/
+        "-j=5", // 同时开启的任务数量
+        "--all-scopes-completion",   // 全局补全（会自动补充头文件）
+        "--header-insertion=never",   // 禁止自动补全头文件
+        "--completion-style=detailed", // 更详细的补全内容
+    ],
+
+    "clangd.semanticHighlighting":true,
+
+    // coc-pairs 自动补全括号等字符输入
+    "pairs.enableCharacters": ["(", "[", "{", "<", "'", "\"", "`"],
+
+    "translator.engines": [
+        "youdao"
+    ],
+
+    "snippets.ultisnips.pythonPrompt": false,
+    "todolist.dateFormat": {
+        "type": "string",
+        "default": "YYYY-MM-DD HH:mm",
+        "description": "dates format"
+    },
+    "todolist.monitor": {
+        "type": "boolean",
+        "default": false,
+        "description": "monitor the todolist and remind you at the time"
+    },
+
+}
